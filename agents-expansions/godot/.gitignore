@@ -1,0 +1,23 @@
+# Godot 4 local editor cache — regenerated automatically, never commit it.
+.godot/
+
+# Godot 3 equivalent, in case an older project still uses it.
+.import/
+
+# Export artifacts and export-preset files can carry signing keys or
+# credentials; export builds shouldn't live in version control either.
+export_presets.cfg
+*.pck
+*.apk
+*.aab
+*.ipa
+*.zip
+
+# Mono/C# build output, if the project uses C# scripting.
+.mono/
+data_*/
+mono_crash.*.json
+
+# OS/editor cruft.
+.DS_Store
+Thumbs.db
