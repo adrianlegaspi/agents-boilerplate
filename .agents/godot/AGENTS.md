@@ -1,8 +1,7 @@
 # Godot expansion
 
 Stack-specific rules to layer on top of [AGENTS.md](../../AGENTS.md) when the
-project is a Godot game. Copy this file's content into the project's own
-`AGENTS.md` (or link to it) — it doesn't replace the base rules, it adds to
+project is a Godot game. These add to the base rules, they do not replace
 them.
 
 ## Scenes are the architecture — don't code around the engine

@@ -6,13 +6,11 @@ them. If something here conflicts with an explicit user instruction in the
 current conversation, the user instruction wins.
 
 Stack-specific rules that build on top of this file live in
-[agents-expansions/](./agents-expansions/), one subfolder per stack — e.g.
-[agents-expansions/godot/](./agents-expansions/godot/) and
-[agents-expansions/node/](./agents-expansions/node/). Each subfolder pairs an
-`AGENTS.md` expansion with a generic `.gitignore` for that stack. When a
-project uses one of those stacks, pull the relevant expansion's content into
-that project's own `AGENTS.md` (or link to it) alongside this base file, and
-copy or merge the matching `.gitignore`.
+[.agents/](./.agents/), one subfolder per stack, e.g.
+[.agents/godot/](./.agents/godot/) and [.agents/node/](./.agents/node/). Each
+subfolder pairs an `AGENTS.md` expansion with a generic `.gitignore` for that
+stack. Read the expansion matching this project's stack alongside this file.
+Expansions add to these rules, they do not replace them.
 
 ## Prime directives
 
@@ -149,6 +147,10 @@ copy or merge the matching `.gitignore`.
   instead.
 - **Never use the Oxford comma.** In a list of three or more items, write
   "a, b and c" rather than "a, b, and c".
+- **Never use litotes.** Don't state something by negating its opposite.
+  Write "common" not "not uncommon", "works" not "not broken", "a hard
+  problem" not "no small problem". Say the thing directly, including when
+  the direct version is blunter.
 
 ## Definition of done
 
