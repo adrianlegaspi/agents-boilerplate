@@ -68,11 +68,20 @@ its principle manually instead of skipping it.
 - **No dead code.** Delete code that's no longer used instead of commenting
   it out or leaving it behind a disabled flag. Version control is the
   archive, not the working tree.
+- **Code is the primary documentation.** Names, types and structure carry the
+  explanation. A comment is a fallback for what the code genuinely cannot
+  express, so when one feels necessary, first check whether a better name or
+  a smaller function removes the need for it.
 - **Comment the why, not the what.** Well-named code already explains what
   it does. Only add a comment when it captures something the code can't:
   a non-obvious constraint, a workaround for a specific bug, a reason a
   simpler approach won't work. Skip comments that just restate the next
   line.
+- **Keep doc comments to two lines.** JSDoc blocks and comments stay concise
+  and brief. Prose running past two lines means the description is doing work
+  the code should be doing: rename, split or simplify until it fits. JSDoc
+  tag lines (`@param`, `@returns`, `@throws` and similar) sit outside that
+  count, they define the contract and are required to describe it correctly.
 - **File size as a design signal.** When a file grows very large (roughly
   800–1000 lines, depending on language norms), treat it as a prompt to
   look for a natural seam to split along — not a hard rule to game with
@@ -91,6 +100,11 @@ its principle manually instead of skipping it.
   language and existing codebase already use consistently. If none exists
   yet, pick the idiomatic convention for that language and apply it
   consistently rather than mixing styles.
+- **No abbreviated names.** Spell identifiers out: `button` not `btn`,
+  `index` not `idx`, `configuration` not `cfg`, `request` not `req`,
+  `temporary` not `tmp`. Established acronyms and domain terms (`id`, `url`,
+  `http`, `json`) are words in their own right rather than abbreviations, so
+  use them as they are.
 
 ## Security
 
