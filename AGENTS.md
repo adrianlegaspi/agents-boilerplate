@@ -100,11 +100,19 @@ its principle manually instead of skipping it.
   language and existing codebase already use consistently. If none exists
   yet, pick the idiomatic convention for that language and apply it
   consistently rather than mixing styles.
-- **No abbreviated names.** Spell identifiers out: `button` not `btn`,
-  `index` not `idx`, `configuration` not `cfg`, `request` not `req`,
-  `temporary` not `tmp`. Established acronyms and domain terms (`id`, `url`,
-  `http`, `json`) are words in their own right rather than abbreviations, so
-  use them as they are.
+- **Abbreviated identifiers are forbidden.** This is a hard rule and it
+  applies to every identifier in the code: variables, parameters, functions,
+  types, fields, files. Never truncate or mangle a word. Write `userProfile`
+  not `user_p`, `button` not `btn`, `index` not `idx`, `configuration` not
+  `cfg`, `request` not `req`, `temporary` not `tmp`. Established acronyms are
+  words rather than truncations, so `mcp`, `smtp`, `aws`, `http`, `url`, `id`
+  and `json` are correct as they are.
+- **Name the real abstraction, never a placeholder.** A binding takes the
+  domain name of what it actually holds. Write `products.map(product => ...)`
+  not `products.map(item => ...)`. `item`, `el`, `obj`, `val`, `data`,
+  `thing` and bare single letters describe nothing and are forbidden for
+  domain values. A numeric loop counter (`i`) is the one exception, since it
+  holds an index rather than a domain object.
 
 ## Security
 
@@ -188,6 +196,9 @@ its principle manually instead of skipping it.
   Write "common" not "not uncommon", "works" not "not broken", "a hard
   problem" not "no small problem". Say the thing directly, including when
   the direct version is blunter.
+- **Never use bullet or middle dot characters.** Don't use the bullet character
+  (•) or middle-dot / interpunct character (·) anywhere across text, copy,
+  metadata, labels or code.
 
 ## Definition of done
 
